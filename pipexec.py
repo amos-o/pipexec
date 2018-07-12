@@ -1,9 +1,23 @@
-import argparse
+import subprocess
 
+from cleo import Command
 
-parser = argparse.ArgumentParser(description="Create a shell with a pip package")
+class PipExec(Command):
+    """
+    Test a pip package
 
-parser.add_argument('package_name', metavar='package_name', type=str,
-                    help='The name of the package to be included in your shell environment')
+    pipexec
+        {package? : The package name to test}
+    """
+    def handle(self):
+        package = self.argument('package')
+        self.line(f'<info>Starting your {package} shell...</info>')
+        subprocess.call(['python3', '-m', 'venv', '.venv'])
+        subprocess.call(['/bin/sh', '.venv/bin/activate'])
+        subprocess.call(['pip', 'install', f'{package}'])
+        subprocess.call(['python3'])
+        subprocess.call(['rm', '-rf', '.venv'])
+        self.line('<info>Bye!</info>')
 
-arg = parser.parse_args()
+if __name__ == '__main__':
+    hello()
