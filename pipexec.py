@@ -18,6 +18,3 @@ class PipExec(Command):
         subprocess.call(['python3'])
         subprocess.call(['rm', '-rf', '.venv'])
         self.line('<info>Bye!</info>')
-
-if __name__ == '__main__':
-    hello()

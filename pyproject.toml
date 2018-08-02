@@ -15,4 +15,4 @@ cleo = "^0.6.8"
 pylint = "^1.9"
 
 [tool.poetry.scripts]
-poetry = 'pipexec.pipexec'
+poetry = 'app:pipexec'
