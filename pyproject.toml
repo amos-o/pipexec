@@ -9,10 +9,10 @@ repository = "https://github.com/amos-o/pipexec"
 
 [tool.poetry.dependencies]
 python = "~3.8"
-cleo = "^0.6.8"
+cleo = "~0.8.0"
 
 [tool.poetry.dev-dependencies]
-pylint = "^1.9"
+flake8 = "~3.7.9"
 
 [tool.poetry.scripts]
 pipexec = 'console:main'
