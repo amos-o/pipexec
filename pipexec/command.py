@@ -2,7 +2,8 @@ import subprocess
 
 from cleo import Command
 
-class PipExec(Command):
+
+class PipexecCommand(Command):
     """
     Test a pip package
 

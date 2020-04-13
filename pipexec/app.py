@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from pipexec import PipExec
 from cleo import Application
 
+from .command import PipexecCommand
+
+
 application = Application()
-application.add(PipExec())
+application.add(PipexecCommand())
 
 if __name__ == '__main__':
     application.run()
