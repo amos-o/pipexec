@@ -8,11 +8,11 @@ readme = 'README.md'
 repository = "https://github.com/amos-o/pipexec"
 
 [tool.poetry.dependencies]
-python = "~2.7 || ^3.4"
+python = "~3.8"
 cleo = "^0.6.8"
 
 [tool.poetry.dev-dependencies]
 pylint = "^1.9"
 
 [tool.poetry.scripts]
-poetry = 'app:pipexec'
+pipexec = 'console:main'
