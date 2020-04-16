@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pipexec"
-version = "0.2.4"
+version = "0.2.5"
 description = "Test pip packages quickly"
 authors = ["Amos Omondi"]
 license = "MIT"
@@ -9,10 +9,10 @@ repository = "https://github.com/amos-o/pipexec"
 
 [tool.poetry.dependencies]
 python = "~3.8"
-cleo = "~0.8.0"
+typer = "^0.1.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "~3.7.9"
 
 [tool.poetry.scripts]
-pipexec = 'pipexec:main'
+pipexec = 'pipexec.cli:main'
